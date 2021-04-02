@@ -1,60 +1,34 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
     <v-main>
-      <HelloWorld/>
+      <v-container>
+        <v-row justify="center">
+          <v-col class="text-center" cols="8">
+            <h1 class="display-2 font-weight-bold">BCJI Tools</h1>
+            <p class="subheading">
+              <a href="https://syosetu.org/novel/217501/">美少女になってちやほやされて人生イージーモードで生きたい！</a>で使われている特殊タグをいい感じに生成するやつです。
+            </p>
+            <CreateChat />
+          </v-col>
+        </v-row>
+      </v-container>
     </v-main>
+    <v-footer>
+      <v-col class="text-center">
+        &copy; 2021 <a href="http://twitter.com/x0xfes">x0xfes</a>
+      </v-col>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import CreateChat from './components/CreateChat';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
+    CreateChat
+  }
 };
 </script>
