@@ -40,9 +40,12 @@
       return {
         count: 0,
         side: [{label: "右", value: 0}, {label: "左", value: 1}],
-        chats: [this.createChatObj()],
+        chats: [],
         snackbar: false
       }
+    },
+    created() {
+      this.add();
     },
     methods: {
       createChatObj() {
